@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Extractive Question Answering: Answer</title>
+</head>
+<body>
+    <h1>Your Answer</h1>
+    Question:
+    <br>
+    {{ question }}
+    <br><br>
+    Answer BERT:
+    <br>
+    {{ answer_bert }}
+    <br><br>
+    Answer BERT large:
+    <br>
+    {{ answer_bert_large }}
+    <br><br>
+    <a href="{% url 'simple-qa-question' %}">Ask another question.</a>
+    <br>
+    <a href="{% url 'home' %}">Back to home screen.</a>
+</body>
+</html>

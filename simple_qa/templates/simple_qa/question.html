@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Extractive Question Answering</title>
+</head>
+<body>
+<div>
+    <h1>Ask a Question!</h1>
+
+    <form action="{% url 'simple-qa-answer' %}">
+        <label for="context">Context:</label>
+        <br>
+        <textarea id="context" name="context" rows="36" cols="80">
+Munich-based PropTech startup Building Radar has raised €5 million
+in a Series A round, led by PropTech Ventures with support from
+coparion, FO Holding, and SIGNA innovations.
+
+Building Radar uses AI to do exactly what its name suggests: to
+identify new construction projects worldwide. The company aims to
+digitise the construction industry, which is growing fast in the
+founders’ home country of Germany.
+
+The only way for suppliers and service providers to capitalize on
+the booming construction industry is if they are aware of
+construction projects early on. Customer acquisition traditionally
+requires hours of manual research and reliance on word of mouth.
+Building Radar provides the technology for these companies to
+easily source new contracts and increase revenue potential.
+
+The software identifies 5,000 new construction projects a day from
+more than 100,000 different sources, covering more than 5 million
+construction sites. The user can search by location, construction
+phase or size, and can receive push notifications about every
+potential project.
+
+PropTech1 Ventures is Germany’s first VC fund dedicated to the
+PropTech sector. Commenting on the investment, Managing Partner
+Anja Rath said, “When it comes to digital innovations, the
+construction industry has enormous growth potential.
+Accordingly, we are pleased to invest in Building Radar, a
+PropTech that, with the help of artificial intelligence,
+frees suppliers in the construction industry from extremely
+idle manual processes at the sales level.”
+
+Leopold Neuerburg, Paul Indinger, and Raoul Friedrich founded
+the company in 2015. They will use the funds to expand into
+new markets, refine the search algorithm, and optimise
+machine-learning search results.
+        </textarea>
+
+        <br><br>
+        <label for="question">Question:</label>
+        <br>
+        <textarea id="question" name="question" rows="1" cols="80">
+Who are the founders of Building Radar?
+        </textarea>
+
+        <br><br>
+        <input type="submit" value="Tell me!">
+    </form>
+    <br>
+    <a href="{% url 'home' %}">Back to home screen.</a>
+</div>
+</body>
+</html>
